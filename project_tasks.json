@@ -2,46 +2,265 @@
   "project": {
     "name": "SF DBI Data Pipeline Implementation",
     "description": "Implement Cloudflare Pipelines architecture for SF Department of Building Inspection data to enable real-time ingestion, historical analytics, and enhanced AI agent capabilities for the Renovation Project Manager system.",
-    "created_at": "2025-06-30T10:00:00Z",
-    "updated_at": "2025-06-30T10:00:00Z"
-  },
-  "milestones": [
-    {
-      "id": 1,
-      "name": "Phase 1: Pipeline Foundation",
-      "description": "Establish core pipeline infrastructure, R2 buckets, and basic data ingestion workflows",
-      "status": "Not Started",
-      "duration_weeks": 2,
-      "start_date": "2025-07-01",
-      "target_completion": "2025-07-14",
-      "updated_at": "2025-06-30T10:00:00Z",
-      "tasks": [}
-    }
-  ],
-  "agents": {
-    "planner": {
-      "name": "Project Manager Agent",
-      "role": "Coordinates pipeline implementation, tracks dependencies, and manages timeline",
-      "status": "Active"
+    "milestones": [
+      {
+        "name": "Phase 1: Pipeline Foundation",
+        "start_date": "2025-07-01",
+        "target_completion": "2025-07-14",
+        "description": "Establish core pipeline infrastructure, R2 buckets, and basic data ingestion workflows.",
+        "tasks": [
+          {
+            "id": 1,
+            "name": "Create R2 Buckets for Permit Data Storage",
+            "description": "Set up dedicated R2 buckets for different types of SF DBI data: permits, events, inspector analytics, and processed files tracking.",
+            "priority": "High",
+            "estimated_hours": 4,
+            "assigned_agent": "backend"
+          },
+          {
+            "id": 2,
+            "name": "Create Core Permit Data Pipeline",
+            "description": "Set up the primary pipeline for ingesting building permit records from DataSF APIs with optimized batching and compression settings.",
+            "priority": "High",
+            "estimated_hours": 6,
+            "assigned_agent": "backend"
+          },
+          {
+            "id": 3,
+            "name": "Create Permit Events Pipeline",
+            "description": "Set up secondary pipeline for real-time permit status changes, inspector assignments, and permit lifecycle events.",
+            "priority": "High",
+            "estimated_hours": 5,
+            "assigned_agent": "backend"
+          },
+          {
+            "id": 4,
+            "name": "Create Inspector Analytics Pipeline",
+            "description": "Set up pipeline for tracking inspector performance metrics, workload distribution, and processing patterns.",
+            "priority": "Medium",
+            "estimated_hours": 4,
+            "assigned_agent": "backend"
+          },
+          {
+            "id": 5,
+            "name": "Enhance Existing Permit Sync Worker",
+            "description": "Modify the current permit sync worker to publish data to pipelines instead of directly writing to D1, maintaining backward compatibility.",
+            "priority": "High",
+            "estimated_hours": 8,
+            "assigned_agent": "backend"
+          },
+          {
+            "id": 6,
+            "name": "Implement Data Schema Standardization",
+            "description": "Define and implement standardized data schemas for permit records, events, and inspector analytics to ensure consistency across pipelines.",
+            "priority": "High",
+            "estimated_hours": 6,
+            "assigned_agent": "backend"
+          },
+          {
+            "id": 7,
+            "name": "Verify Data Flow and R2 Storage",
+            "description": "Test end-to-end data flow from DataSF APIs through pipelines to R2 storage, ensuring data integrity and proper partitioning.",
+            "priority": "High",
+            "estimated_hours": 4,
+            "assigned_agent": "backend"
+          }
+        ]
+      },
+      {
+        "name": "Phase 2: Data Processing Layer",
+        "start_date": "2025-07-15",
+        "target_completion": "2025-07-28",
+        "description": "Implement data processing workers, update D1 schema, and establish data quality monitoring.",
+        "tasks": [
+          {
+            "id": 8,
+            "name": "Implement Data Processor Worker",
+            "description": "Create worker to process data from R2 buckets and update D1 database, bridging the pipeline data lake with operational queries.",
+            "priority": "High",
+            "estimated_hours": 12,
+            "assigned_agent": "backend"
+          },
+          {
+            "id": 9,
+            "name": "Update D1 Database Schema",
+            "description": "Enhance D1 schema to support pipeline integration while maintaining backward compatibility with existing agents.",
+            "priority": "High",
+            "estimated_hours": 6,
+            "assigned_agent": "backend"
+          },
+          {
+            "id": 10,
+            "name": "Implement Data Quality Monitoring",
+            "description": "Create monitoring and alerting system for data quality issues, pipeline failures, and processing delays.",
+            "priority": "Medium",
+            "estimated_hours": 8,
+            "assigned_agent": "backend"
+          },
+          {
+            "id": 11,
+            "name": "Maintain Backward Compatibility",
+            "description": "Ensure existing agents and API endpoints continue to function correctly during pipeline integration.",
+            "priority": "High",
+            "estimated_hours": 6,
+            "assigned_agent": "backend"
+          },
+          {
+            "id": 12,
+            "name": "Optimize D1 Query Performance",
+            "description": "Optimize D1 database queries and indexes to handle increased data volume and maintain fast response times.",
+            "priority": "Medium",
+            "estimated_hours": 5,
+            "assigned_agent": "backend"
+          },
+          {
+            "id": 13,
+            "name": "Implement Error Recovery and Retry Logic",
+            "description": "Build robust error handling and recovery mechanisms for all pipeline components.",
+            "priority": "High",
+            "estimated_hours": 7,
+            "assigned_agent": "backend"
+          }
+        ]
+      },
+      {
+        "name": "Phase 3: Agent Enhancement",
+        "start_date": "2025-07-29",
+        "target_completion": "2025-08-11",
+        "description": "Enhance existing AI agents with pipeline data access and implement new analytics capabilities.",
+        "tasks": [
+          {
+            "id": 14,
+            "name": "Enhance Permit Intelligence Agent with R2 Data Access",
+            "description": "Upgrade the Permit Intelligence Agent to leverage historical data from R2 for improved predictions and insights.",
+            "priority": "High",
+            "estimated_hours": 10,
+            "assigned_agent": "backend"
+          },
+          {
+            "id": 15,
+            "name": "Implement Historical Analytics Capabilities",
+            "description": "Create comprehensive analytics functions for querying and analyzing historical permit data.",
+            "priority": "High",
+            "estimated_hours": 8,
+            "assigned_agent": "backend"
+          },
+          {
+            "id": 16,
+            "name": "Implement Predictive Timeline Models",
+            "description": "Develop machine learning models for predicting permit processing timelines based on historical data.",
+            "priority": "High",
+            "estimated_hours": 12,
+            "assigned_agent": "backend"
+          },
+          {
+            "id": 17,
+            "name": "Create Enhanced Permit Insights API",
+            "description": "Build new API endpoints that expose enhanced permit insights and analytics to the frontend and other agents.",
+            "priority": "Medium",
+            "estimated_hours": 6,
+            "assigned_agent": "backend"
+          },
+          {
+            "id": 18,
+            "name": "Update Program Manager Agent",
+            "description": "Enhance the Program Manager Agent to leverage permit processing insights for better project timeline management.",
+            "priority": "Medium",
+            "estimated_hours": 6,
+            "assigned_agent": "backend"
+          },
+          {
+            "id": 19,
+            "name": "Enhance Contract Analysis Agent",
+            "description": "Update Contract Analysis Agent to correlate contractor performance with permit compliance and success rates.",
+            "priority": "Medium",
+            "estimated_hours": 5,
+            "assigned_agent": "backend"
+          }
+        ]
+      },
+      {
+        "name": "Phase 4: Advanced Analytics & UI",
+        "start_date": "2025-08-12",
+        "target_completion": "2025-08-25",
+        "description": "Implement advanced analytics features, real-time dashboards, and machine learning capabilities.",
+        "tasks": [
+          {
+            "id": 20,
+            "name": "Create Real-time Analytics Dashboard",
+            "description": "Build comprehensive dashboard showing permit processing metrics, trends, and insights in real-time.",
+            "priority": "High",
+            "estimated_hours": 12,
+            "assigned_agent": "frontend"
+          },
+          {
+            "id": 21,
+            "name": "Implement Machine Learning Capabilities",
+            "description": "Develop advanced ML models for permit outcome prediction, anomaly detection, and optimization recommendations.",
+            "priority": "Medium",
+            "estimated_hours": 16,
+            "assigned_agent": "backend"
+          },
+          {
+            "id": 22,
+            "name": "Add Advanced Query Interface",
+            "description": "Create interface for complex analytics queries and custom reports on permit data.",
+            "priority": "Medium",
+            "estimated_hours": 8,
+            "assigned_agent": "frontend"
+          },
+          {
+            "id": 23,
+            "name": "Implement Notification and Alerting System",
+            "description": "Create intelligent notification system for permit updates, delays, and opportunities.",
+            "priority": "Medium",
+            "estimated_hours": 6,
+            "assigned_agent": "backend"
+          },
+          {
+            "id": 24,
+            "name": "Performance Optimization and Scaling",
+            "description": "Optimize system performance for large-scale data processing and high user concurrency.",
+            "priority": "High",
+            "estimated_hours": 8,
+            "assigned_agent": "backend"
+          },
+          {
+            "id": 25,
+            "name": "Comprehensive Testing and Documentation",
+            "description": "Complete end-to-end testing and create comprehensive documentation for the pipeline system.",
+            "priority": "High",
+            "estimated_hours": 10,
+            "assigned_agent": "backend"
+          }
+        ]
+      }
+    ],
+    "agents": {
+      "planner": {
+        "name": "Project Manager Agent",
+        "role": "Coordinates pipeline implementation, tracks dependencies, and manages timeline",
+        "status": "Active"
+      },
+      "frontend": {
+        "name": "Frontend Development Agent",
+        "role": "Implements dashboard UI, analytics visualizations, and user interfaces",
+        "status": "Active"
+      },
+      "backend": {
+        "name": "Backend Development Agent",
+        "role": "Implements pipelines, workers, database schema, and API endpoints",
+        "status": "Active"
+      }
     },
-    "frontend": {
-      "name": "Frontend Development Agent",
-      "role": "Implements dashboard UI, analytics visualizations, and user interfaces",
-      "status": "Active"
-    },
-    "backend": {
-      "name": "Backend Development Agent",
-      "role": "Implements pipelines, workers, database schema, and API endpoints",
-      "status": "Active"
+    "metrics": {
+      "total_tasks": 25,
+      "completed_tasks": 0,
+      "in_progress_tasks": 0,
+      "not_started_tasks": 25,
+      "completion_percentage": 0.0,
+      "estimated_total_hours": 178,
+      "actual_hours_spent": 0
     }
-  },
-  "metrics": {
-    "total_tasks": 25,
-    "completed_tasks": 0,
-    "in_progress_tasks": 0,
-    "not_started_tasks": 25,
-    "completion_percentage": 0.0,
-    "estimated_total_hours": 178,
-    "actual_hours_spent": 0
   }
 }
