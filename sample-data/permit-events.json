@@ -1,0 +1,106 @@
+[
+  {
+    "eventId": "evt_001",
+    "permitId": "PRM2024-001234",
+    "eventType": "status_change",
+    "timestamp": "2024-01-15T10:30:00Z",
+    "eventData": {
+      "previousStatus": "submitted",
+      "newStatus": "under_review",
+      "changedBy": "system",
+      "reason": "Initial review started"
+    }
+  },
+  {
+    "eventId": "evt_002",
+    "permitId": "PRM2024-001234",
+    "eventType": "inspector_assigned",
+    "timestamp": "2024-01-15T11:15:00Z",
+    "eventData": {
+      "inspectorId": "INS001",
+      "inspectorName": "John Smith",
+      "assignedBy": "supervisor_jones",
+      "specialization": "structural"
+    }
+  },
+  {
+    "eventId": "evt_003",
+    "permitId": "PRM2024-001234",
+    "eventType": "document_uploaded",
+    "timestamp": "2024-01-15T12:45:00Z",
+    "eventData": {
+      "documentId": "DOC789",
+      "documentType": "structural_plans",
+      "fileName": "structural_plans_v2.pdf",
+      "uploadedBy": "applicant_doe",
+      "fileSize": 2048000
+    }
+  },
+  {
+    "eventId": "evt_004",
+    "permitId": "PRM2024-001234",
+    "eventType": "inspection_scheduled",
+    "timestamp": "2024-01-15T14:20:00Z",
+    "eventData": {
+      "inspectionId": "INS2024-005678",
+      "inspectionType": "rough_framing",
+      "scheduledDate": "2024-01-22T09:00:00Z",
+      "inspectorId": "INS001",
+      "location": "123 Main St, San Francisco, CA 94102"
+    }
+  },
+  {
+    "eventId": "evt_005",
+    "permitId": "PRM2024-001235",
+    "eventType": "payment_received",
+    "timestamp": "2024-01-15T15:10:00Z",
+    "eventData": {
+      "paymentId": "PAY456",
+      "amount": 1250.00,
+      "currency": "USD",
+      "paymentMethod": "credit_card",
+      "transactionId": "txn_abc123",
+      "paidBy": "applicant_johnson"
+    }
+  },
+  {
+    "eventId": "evt_006",
+    "permitId": "PRM2024-001235",
+    "eventType": "status_change",
+    "timestamp": "2024-01-15T15:15:00Z",
+    "eventData": {
+      "previousStatus": "payment_pending",
+      "newStatus": "approved",
+      "changedBy": "system",
+      "reason": "Payment confirmed, all requirements met"
+    }
+  },
+  {
+    "eventId": "evt_007",
+    "permitId": "PRM2024-001236",
+    "eventType": "comment_added",
+    "timestamp": "2024-01-15T16:30:00Z",
+    "eventData": {
+      "commentId": "CMT789",
+      "commentText": "Structural calculations need revision for seismic requirements",
+      "addedBy": "inspector_wilson",
+      "commentType": "revision_request",
+      "isPublic": true
+    }
+  },
+  {
+    "eventId": "evt_008",
+    "permitId": "PRM2024-001237",
+    "eventType": "inspection_completed",
+    "timestamp": "2024-01-15T17:45:00Z",
+    "eventData": {
+      "inspectionId": "INS2024-005679",
+      "inspectionType": "foundation",
+      "result": "passed",
+      "inspectorId": "INS002",
+      "completedDate": "2024-01-15T17:45:00Z",
+      "notes": "Foundation meets all code requirements",
+      "nextInspectionType": "rough_framing"
+    }
+  }
+]

@@ -29,3 +29,28 @@ node scripts/create_pipelines.js
 
 Both scripts simply wrap `wrangler` commands and will log errors if creation fails.
 
+## Permit Events Pipeline
+
+The `sf-permit-events` pipeline is configured for real-time processing of permit status changes, inspector assignments, and permit lifecycle events.
+
+### Configuration
+- **Batch interval**: 30 seconds (near real-time processing)
+- **Batch size**: 25 MB maximum
+- **Shards**: 2 (for event volume handling)
+- **Compression**: gzip
+- **R2 bucket**: sf-permit-events
+
+### Documentation
+- [Event Schema](./docs/permit-events-schema.md) - Required fields and event types
+- [Integration Endpoints](./docs/integration-endpoints.md) - API endpoints and usage examples
+
+### Testing
+Run the validation test to ensure proper configuration:
+
+```
+node test-permit-events.js
+```
+
+### Sample Data
+Sample permit events are provided in `sample-data/permit-events.json` for testing and integration development.
+
