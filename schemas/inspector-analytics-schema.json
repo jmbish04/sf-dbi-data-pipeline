@@ -1,0 +1,135 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Inspector Analytics Schema",
+  "description": "Schema for tracking inspector performance metrics, workload distribution, and processing patterns",
+  "type": "object",
+  "required": [
+    "inspector_id",
+    "timestamp",
+    "performance_metrics"
+  ],
+  "properties": {
+    "inspector_id": {
+      "type": "string",
+      "description": "Anonymized unique identifier for the inspector",
+      "pattern": "^INS[0-9A-F]{8}$"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of the analytics record"
+    },
+    "performance_metrics": {
+      "type": "object",
+      "description": "Inspector performance indicators",
+      "required": ["inspections_completed", "avg_inspection_time_minutes"],
+      "properties": {
+        "inspections_completed": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of inspections completed in the time period"
+        },
+        "avg_inspection_time_minutes": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Average time spent per inspection in minutes"
+        },
+        "on_time_rate": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Percentage of inspections completed on time (0-1)"
+        },
+        "rescheduled_count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of inspections that were rescheduled"
+        }
+      }
+    },
+    "workload_distribution": {
+      "type": "object",
+      "description": "Workload analysis and distribution patterns",
+      "properties": {
+        "inspection_types": {
+          "type": "object",
+          "description": "Breakdown by inspection type",
+          "patternProperties": {
+            ".*": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "geographic_zones": {
+          "type": "object",
+          "description": "Distribution across different geographic zones",
+          "patternProperties": {
+            "^zone_[A-Z0-9]+$": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "peak_hours": {
+          "type": "array",
+          "description": "Hours of peak activity (0-23)",
+          "items": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 23
+          }
+        }
+      }
+    },
+    "processing_patterns": {
+      "type": "object",
+      "description": "Patterns in inspection processing and outcomes",
+      "properties": {
+        "approval_rate": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Rate of inspections that resulted in approval (0-1)"
+        },
+        "violation_types": {
+          "type": "object",
+          "description": "Common violation types encountered",
+          "patternProperties": {
+            ".*": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "follow_up_required_rate": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Rate of inspections requiring follow-up (0-1)"
+        }
+      }
+    },
+    "privacy_metadata": {
+      "type": "object",
+      "description": "Metadata for privacy compliance tracking",
+      "required": ["anonymization_applied", "retention_period_days"],
+      "properties": {
+        "anonymization_applied": {
+          "type": "boolean",
+          "description": "Indicates if personal identifiers have been anonymized"
+        },
+        "retention_period_days": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Number of days this record should be retained"
+        },
+        "geographic_precision": {
+          "type": "string",
+          "enum": ["zone", "district", "city"],
+          "description": "Level of geographic precision to protect privacy"
+        }
+      }
+    }
+  }
+}

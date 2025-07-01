@@ -1,0 +1,117 @@
+[
+  {
+    "inspector_id": "INS4A7B92F1",
+    "timestamp": "2024-01-15T10:00:00Z",
+    "performance_metrics": {
+      "inspections_completed": 12,
+      "avg_inspection_time_minutes": 45.5,
+      "on_time_rate": 0.92,
+      "rescheduled_count": 1
+    },
+    "workload_distribution": {
+      "inspection_types": {
+        "electrical": 4,
+        "plumbing": 3,
+        "structural": 2,
+        "mechanical": 3
+      },
+      "geographic_zones": {
+        "zone_A1": 5,
+        "zone_B2": 4,
+        "zone_C3": 3
+      },
+      "peak_hours": [9, 10, 11, 14, 15]
+    },
+    "processing_patterns": {
+      "approval_rate": 0.83,
+      "violation_types": {
+        "code_compliance": 2,
+        "safety_hazard": 1,
+        "permit_issue": 1
+      },
+      "follow_up_required_rate": 0.25
+    },
+    "privacy_metadata": {
+      "anonymization_applied": true,
+      "retention_period_days": 365,
+      "geographic_precision": "zone"
+    }
+  },
+  {
+    "inspector_id": "INS8C3E1D45",
+    "timestamp": "2024-01-15T10:00:00Z",
+    "performance_metrics": {
+      "inspections_completed": 8,
+      "avg_inspection_time_minutes": 38.2,
+      "on_time_rate": 0.88,
+      "rescheduled_count": 2
+    },
+    "workload_distribution": {
+      "inspection_types": {
+        "electrical": 2,
+        "plumbing": 2,
+        "structural": 1,
+        "mechanical": 2,
+        "fire_safety": 1
+      },
+      "geographic_zones": {
+        "zone_A1": 3,
+        "zone_B2": 2,
+        "zone_D4": 3
+      },
+      "peak_hours": [8, 9, 13, 14, 16]
+    },
+    "processing_patterns": {
+      "approval_rate": 0.75,
+      "violation_types": {
+        "code_compliance": 1,
+        "safety_hazard": 2,
+        "documentation": 1
+      },
+      "follow_up_required_rate": 0.38
+    },
+    "privacy_metadata": {
+      "anonymization_applied": true,
+      "retention_period_days": 365,
+      "geographic_precision": "zone"
+    }
+  },
+  {
+    "inspector_id": "INS2F9A6B84",
+    "timestamp": "2024-01-15T10:00:00Z",
+    "performance_metrics": {
+      "inspections_completed": 15,
+      "avg_inspection_time_minutes": 52.1,
+      "on_time_rate": 0.87,
+      "rescheduled_count": 3
+    },
+    "workload_distribution": {
+      "inspection_types": {
+        "electrical": 6,
+        "plumbing": 4,
+        "structural": 3,
+        "mechanical": 2
+      },
+      "geographic_zones": {
+        "zone_B2": 6,
+        "zone_C3": 5,
+        "zone_D4": 4
+      },
+      "peak_hours": [10, 11, 12, 15, 16]
+    },
+    "processing_patterns": {
+      "approval_rate": 0.80,
+      "violation_types": {
+        "code_compliance": 3,
+        "safety_hazard": 1,
+        "permit_issue": 2
+      },
+      "follow_up_required_rate": 0.33
+    },
+    "privacy_metadata": {
+      "anonymization_applied": true,
+      "retention_period_days": 365,
+      "geographic_precision": "zone"
+    }
+  }
+]
