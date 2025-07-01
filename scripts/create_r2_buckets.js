@@ -13,6 +13,6 @@ for (const bucket of buckets) {
   try {
     execSync(cmd, { stdio: 'inherit' });
   } catch (err) {
-    console.error(`Failed to create bucket ${bucket}:`, err.message);
+    console.error(`Failed to create bucket ${bucket}:`, err);
   }
 }
