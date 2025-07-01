@@ -29,3 +29,35 @@ node scripts/create_pipelines.js
 
 Both scripts simply wrap `wrangler` commands and will log errors if creation fails.
 
+## Pipeline Endpoints
+
+After successful creation, the pipelines will be available at the following endpoints:
+
+### sf-permits-ingestion Pipeline
+- **Endpoint URL**: `https://api.cloudflare.com/client/v4/pipelines/sf-permits-ingestion`
+- **Configuration**: 
+  - Batch interval: 60 seconds
+  - Batch size: 50 MB max
+  - Compression: gzip
+  - Shards: 3
+  - R2 bucket: sf-permits-data
+
+### Health Check
+Run the health check script to verify pipeline status:
+```
+node scripts/health_check.js
+```
+
+## Testing
+
+Run the test suite to verify pipeline configuration:
+```
+npm test
+```
+
+This will validate that all pipeline configurations meet the requirements including:
+- Correct pipeline names and settings
+- Proper batch intervals and compression
+- Shard configuration
+- Documentation completeness
+
