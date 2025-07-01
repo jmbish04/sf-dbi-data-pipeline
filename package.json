@@ -4,7 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "verify": "node verification/run-all-tests.js --verbose",
+    "verify:staging": "node verification/run-all-tests.js --staging --verbose",
+    "verify:quick": "node verification/run-all-tests.js --skip-errors",
+    "verify:data-flow": "node verification/verify-data-flow.js --verbose",
+    "verify:integrity": "node verification/utils/data-integrity.js --verbose",
+    "verify:timing": "node verification/utils/batch-timing.js --verbose",
+    "verify:errors": "node verification/utils/error-scenarios.js --verbose"
   },
   "keywords": [],
   "author": "",
