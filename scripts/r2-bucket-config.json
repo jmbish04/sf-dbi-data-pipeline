@@ -1,0 +1,67 @@
+{
+  "buckets": [
+    {
+      "name": "sf-permits-data",
+      "description": "Storage for SF DBI permit data",
+      "lifecycleDays": 365,
+      "purpose": "Primary storage for permit records and related documentation",
+      "retention": {
+        "hot": 90,
+        "warm": 180,
+        "cold": 365
+      }
+    },
+    {
+      "name": "sf-permit-events",
+      "description": "Storage for SF DBI permit event tracking data",
+      "lifecycleDays": 180,
+      "purpose": "Event logs and audit trail for permit processing",
+      "retention": {
+        "hot": 30,
+        "warm": 90,
+        "cold": 180
+      }
+    },
+    {
+      "name": "sf-inspector-data",
+      "description": "Storage for SF DBI inspector analytics data",
+      "lifecycleDays": 730,
+      "purpose": "Long-term analytics and reporting data for inspectors",
+      "retention": {
+        "hot": 180,
+        "warm": 365,
+        "cold": 730
+      }
+    },
+    {
+      "name": "sf-processed-files",
+      "description": "Storage for tracking processed data files",
+      "lifecycleDays": 90,
+      "purpose": "Temporary storage for pipeline processing status and metadata",
+      "retention": {
+        "hot": 30,
+        "warm": 60,
+        "cold": 90
+      }
+    }
+  ],
+  "permissions": {
+    "required": [
+      "com.cloudflare.api.account.read",
+      "com.cloudflare.api.r2.bucket.read",
+      "com.cloudflare.api.r2.bucket.create",
+      "com.cloudflare.api.r2.object.read",
+      "com.cloudflare.api.r2.object.write",
+      "com.cloudflare.api.r2.object.delete"
+    ],
+    "optional": [
+      "com.cloudflare.api.r2.bucket.delete",
+      "com.cloudflare.api.r2.object.list"
+    ]
+  },
+  "environment": {
+    "namingConvention": "sf-{data-type}-{environment}",
+    "currentEnvironment": "production",
+    "availableEnvironments": ["development", "staging", "production"]
+  }
+}
