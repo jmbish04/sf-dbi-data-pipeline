@@ -31,5 +31,6 @@ for (const p of pipelines) {
     execSync(cmd, { stdio: 'inherit' });
   } catch (err) {
     console.error(`Failed to create pipeline ${p.name}:`, err.message);
+    console.error('Full error details:', err);
   }
 }
