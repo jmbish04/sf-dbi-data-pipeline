@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node scripts/test_pipeline_config.js",
+    "create-pipelines": "node scripts/create_pipelines.js",
+    "create-buckets": "node scripts/create_r2_buckets.js", 
+    "health-check": "node scripts/health_check.js"
   },
   "keywords": [],
   "author": "",
