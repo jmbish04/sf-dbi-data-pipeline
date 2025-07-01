@@ -11,7 +11,7 @@ for (const bucket of buckets) {
   const cmd = `npx wrangler r2 bucket create ${bucket}`;
   console.log(`Running: ${cmd}`);
   try {
-    const output = execSync(cmd, { stdio: 'inherit' });
+    execSync(cmd, { stdio: 'inherit' });
   } catch (err) {
     console.error(`Failed to create bucket ${bucket}:`, err.message);
   }
