@@ -1,0 +1,47 @@
+{
+  "project": {
+    "name": "SF DBI Data Pipeline Implementation",
+    "description": "Implement Cloudflare Pipelines architecture for SF Department of Building Inspection data to enable real-time ingestion, historical analytics, and enhanced AI agent capabilities for the Renovation Project Manager system.",
+    "created_at": "2025-06-30T10:00:00Z",
+    "updated_at": "2025-06-30T10:00:00Z"
+  },
+  "milestones": [
+    {
+      "id": 1,
+      "name": "Phase 1: Pipeline Foundation",
+      "description": "Establish core pipeline infrastructure, R2 buckets, and basic data ingestion workflows",
+      "status": "Not Started",
+      "duration_weeks": 2,
+      "start_date": "2025-07-01",
+      "target_completion": "2025-07-14",
+      "updated_at": "2025-06-30T10:00:00Z",
+      "tasks": [}
+    }
+  ],
+  "agents": {
+    "planner": {
+      "name": "Project Manager Agent",
+      "role": "Coordinates pipeline implementation, tracks dependencies, and manages timeline",
+      "status": "Active"
+    },
+    "frontend": {
+      "name": "Frontend Development Agent",
+      "role": "Implements dashboard UI, analytics visualizations, and user interfaces",
+      "status": "Active"
+    },
+    "backend": {
+      "name": "Backend Development Agent",
+      "role": "Implements pipelines, workers, database schema, and API endpoints",
+      "status": "Active"
+    }
+  },
+  "metrics": {
+    "total_tasks": 25,
+    "completed_tasks": 0,
+    "in_progress_tasks": 0,
+    "not_started_tasks": 25,
+    "completion_percentage": 0.0,
+    "estimated_total_hours": 178,
+    "actual_hours_spent": 0
+  }
+}
