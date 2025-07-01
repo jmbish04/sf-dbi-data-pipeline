@@ -1,0 +1,27 @@
+name = "permit-sync-pipeline"
+main = "src/permit-sync-pipeline.worker.ts"
+compatibility_date = "2023-12-01"
+
+# Environment bindings for pipelines and D1 database
+[[pipelines]]
+binding = "SF_PERMITS_INGESTION"
+pipeline = "sf-permits-ingestion"
+
+[[pipelines]]
+binding = "SF_PERMIT_EVENTS"
+pipeline = "sf-permit-events"
+
+[[pipelines]]
+binding = "SF_INSPECTOR_ANALYTICS"
+pipeline = "sf-inspector-analytics"
+
+# D1 database binding for fallback
+[[d1_databases]]
+binding = "DB"
+database_name = "sf-permits-db"
+database_id = "your-d1-database-id"
+
+# Environment variables
+[vars]
+ENVIRONMENT = "development"
+LOG_LEVEL = "info"
