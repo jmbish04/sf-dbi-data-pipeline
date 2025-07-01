@@ -1,13 +1,32 @@
 {
   "name": "sf-dbi-data-pipeline",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "San Francisco Department of Building Inspection data pipeline schemas and utilities",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "clean": "rm -rf dist",
+    "prepare": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "sf-dbi",
+    "data-pipeline",
+    "schemas",
+    "typescript"
+  ],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "commonjs",
+  "files": [
+    "dist/**/*",
+    "sample-data/**/*",
+    "docs/**/*"
+  ],
+  "devDependencies": {
+    "@types/node": "^24.0.8",
+    "typescript": "^5.8.3"
+  }
 }
