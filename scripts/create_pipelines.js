@@ -25,7 +25,7 @@ const pipelines = [
 ];
 
 for (const p of pipelines) {
-  const cmd = `npx wrangler pipelines create ${p.name} --r2-bucket ${p.r2} --batch-max-seconds ${p.seconds} --batch-max-mb ${p.mb} --compression gzip --shard-count ${p.shards}`;
+  const cmd = `npx -y wrangler pipelines create ${p.name} --r2-bucket ${p.r2} --batch-max-seconds ${p.seconds} --batch-max-mb ${p.mb} --compression gzip --shard-count ${p.shards}`;
   console.log(`Running: ${cmd}`);
   try {
     execSync(cmd, { stdio: 'inherit' });
