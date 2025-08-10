@@ -15,7 +15,8 @@
             "description": "Set up dedicated R2 buckets for different types of SF DBI data: permits, events, inspector analytics, and processed files tracking.",
             "priority": "High",
             "estimated_hours": 4,
-            "assigned_agent": "backend"
+            "assigned_agent": "backend",
+            "status": "Not Started"
           },
           {
             "id": 2,
@@ -23,7 +24,8 @@
             "description": "Set up the primary pipeline for ingesting building permit records from DataSF APIs with optimized batching and compression settings.",
             "priority": "High",
             "estimated_hours": 6,
-            "assigned_agent": "backend"
+            "assigned_agent": "backend",
+            "status": "Not Started"
           },
           {
             "id": 3,
@@ -31,7 +33,8 @@
             "description": "Set up secondary pipeline for real-time permit status changes, inspector assignments, and permit lifecycle events.",
             "priority": "High",
             "estimated_hours": 5,
-            "assigned_agent": "backend"
+            "assigned_agent": "backend",
+            "status": "Not Started"
           },
           {
             "id": 4,
@@ -39,7 +42,8 @@
             "description": "Set up pipeline for tracking inspector performance metrics, workload distribution, and processing patterns.",
             "priority": "Medium",
             "estimated_hours": 4,
-            "assigned_agent": "backend"
+            "assigned_agent": "backend",
+            "status": "Not Started"
           },
           {
             "id": 5,
@@ -47,7 +51,8 @@
             "description": "Modify the current permit sync worker to publish data to pipelines instead of directly writing to D1, maintaining backward compatibility.",
             "priority": "High",
             "estimated_hours": 8,
-            "assigned_agent": "backend"
+            "assigned_agent": "backend",
+            "status": "Not Started"
           },
           {
             "id": 6,
@@ -55,7 +60,8 @@
             "description": "Define and implement standardized data schemas for permit records, events, and inspector analytics to ensure consistency across pipelines.",
             "priority": "High",
             "estimated_hours": 6,
-            "assigned_agent": "backend"
+            "assigned_agent": "backend",
+            "status": "Not Started"
           },
           {
             "id": 7,
@@ -63,7 +69,8 @@
             "description": "Test end-to-end data flow from DataSF APIs through pipelines to R2 storage, ensuring data integrity and proper partitioning.",
             "priority": "High",
             "estimated_hours": 4,
-            "assigned_agent": "backend"
+            "assigned_agent": "backend",
+            "status": "Not Started"
           }
         ]
       },
@@ -79,7 +86,8 @@
             "description": "Create worker to process data from R2 buckets and update D1 database, bridging the pipeline data lake with operational queries.",
             "priority": "High",
             "estimated_hours": 12,
-            "assigned_agent": "backend"
+            "assigned_agent": "backend",
+            "status": "Not Started"
           },
           {
             "id": 9,
@@ -87,7 +95,8 @@
             "description": "Enhance D1 schema to support pipeline integration while maintaining backward compatibility with existing agents.",
             "priority": "High",
             "estimated_hours": 6,
-            "assigned_agent": "backend"
+            "assigned_agent": "backend",
+            "status": "Not Started"
           },
           {
             "id": 10,
@@ -95,7 +104,8 @@
             "description": "Create monitoring and alerting system for data quality issues, pipeline failures, and processing delays.",
             "priority": "Medium",
             "estimated_hours": 8,
-            "assigned_agent": "backend"
+            "assigned_agent": "backend",
+            "status": "Not Started"
           },
           {
             "id": 11,
@@ -103,7 +113,8 @@
             "description": "Ensure existing agents and API endpoints continue to function correctly during pipeline integration.",
             "priority": "High",
             "estimated_hours": 6,
-            "assigned_agent": "backend"
+            "assigned_agent": "backend",
+            "status": "Not Started"
           },
           {
             "id": 12,
@@ -111,7 +122,8 @@
             "description": "Optimize D1 database queries and indexes to handle increased data volume and maintain fast response times.",
             "priority": "Medium",
             "estimated_hours": 5,
-            "assigned_agent": "backend"
+            "assigned_agent": "backend",
+            "status": "Not Started"
           },
           {
             "id": 13,
@@ -119,7 +131,8 @@
             "description": "Build robust error handling and recovery mechanisms for all pipeline components.",
             "priority": "High",
             "estimated_hours": 7,
-            "assigned_agent": "backend"
+            "assigned_agent": "backend",
+            "status": "Not Started"
           }
         ]
       },
@@ -135,7 +148,8 @@
             "description": "Upgrade the Permit Intelligence Agent to leverage historical data from R2 for improved predictions and insights.",
             "priority": "High",
             "estimated_hours": 10,
-            "assigned_agent": "backend"
+            "assigned_agent": "backend",
+            "status": "Not Started"
           },
           {
             "id": 15,
@@ -143,7 +157,8 @@
             "description": "Create comprehensive analytics functions for querying and analyzing historical permit data.",
             "priority": "High",
             "estimated_hours": 8,
-            "assigned_agent": "backend"
+            "assigned_agent": "backend",
+            "status": "Not Started"
           },
           {
             "id": 16,
@@ -151,7 +166,8 @@
             "description": "Develop machine learning models for predicting permit processing timelines based on historical data.",
             "priority": "High",
             "estimated_hours": 12,
-            "assigned_agent": "backend"
+            "assigned_agent": "backend",
+            "status": "Not Started"
           },
           {
             "id": 17,
@@ -159,7 +175,8 @@
             "description": "Build new API endpoints that expose enhanced permit insights and analytics to the frontend and other agents.",
             "priority": "Medium",
             "estimated_hours": 6,
-            "assigned_agent": "backend"
+            "assigned_agent": "backend",
+            "status": "Not Started"
           },
           {
             "id": 18,
@@ -167,7 +184,8 @@
             "description": "Enhance the Program Manager Agent to leverage permit processing insights for better project timeline management.",
             "priority": "Medium",
             "estimated_hours": 6,
-            "assigned_agent": "backend"
+            "assigned_agent": "backend",
+            "status": "Not Started"
           },
           {
             "id": 19,
@@ -175,7 +193,8 @@
             "description": "Update Contract Analysis Agent to correlate contractor performance with permit compliance and success rates.",
             "priority": "Medium",
             "estimated_hours": 5,
-            "assigned_agent": "backend"
+            "assigned_agent": "backend",
+            "status": "Not Started"
           }
         ]
       },
@@ -191,7 +210,8 @@
             "description": "Build comprehensive dashboard showing permit processing metrics, trends, and insights in real-time.",
             "priority": "High",
             "estimated_hours": 12,
-            "assigned_agent": "frontend"
+            "assigned_agent": "frontend",
+            "status": "Not Started"
           },
           {
             "id": 21,
@@ -199,7 +219,8 @@
             "description": "Develop advanced ML models for permit outcome prediction, anomaly detection, and optimization recommendations.",
             "priority": "Medium",
             "estimated_hours": 16,
-            "assigned_agent": "backend"
+            "assigned_agent": "backend",
+            "status": "Not Started"
           },
           {
             "id": 22,
@@ -207,7 +228,8 @@
             "description": "Create interface for complex analytics queries and custom reports on permit data.",
             "priority": "Medium",
             "estimated_hours": 8,
-            "assigned_agent": "frontend"
+            "assigned_agent": "frontend",
+            "status": "Not Started"
           },
           {
             "id": 23,
@@ -215,7 +237,8 @@
             "description": "Create intelligent notification system for permit updates, delays, and opportunities.",
             "priority": "Medium",
             "estimated_hours": 6,
-            "assigned_agent": "backend"
+            "assigned_agent": "backend",
+            "status": "Not Started"
           },
           {
             "id": 24,
@@ -223,7 +246,8 @@
             "description": "Optimize system performance for large-scale data processing and high user concurrency.",
             "priority": "High",
             "estimated_hours": 8,
-            "assigned_agent": "backend"
+            "assigned_agent": "backend",
+            "status": "Not Started"
           },
           {
             "id": 25,
@@ -231,7 +255,8 @@
             "description": "Complete end-to-end testing and create comprehensive documentation for the pipeline system.",
             "priority": "High",
             "estimated_hours": 10,
-            "assigned_agent": "backend"
+            "assigned_agent": "backend",
+            "status": "Not Started"
           }
         ]
       }
