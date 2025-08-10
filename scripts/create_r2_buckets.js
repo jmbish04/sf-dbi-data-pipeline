@@ -8,7 +8,7 @@ const buckets = [
 ];
 
 for (const bucket of buckets) {
-  const cmd = `npx wrangler r2 bucket create ${bucket}`;
+  const cmd = `npx -y wrangler r2 bucket create ${bucket}`;
   console.log(`Running: ${cmd}`);
   try {
     execSync(cmd, { stdio: 'inherit' });
