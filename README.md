@@ -4,7 +4,7 @@ This repository contains helper scripts for setting up R2 buckets and Cloudflare
 
 ## Requirements
 - [Node.js](https://nodejs.org) 18+
- - [`wrangler`](https://developers.cloudflare.com/workers/wrangler/) configured with your Cloudflare account credentials. The scripts will automatically install `wrangler` via `npx` if it is not already available.
+- [`wrangler`](https://developers.cloudflare.com/workers/wrangler/) configured with your Cloudflare account credentials. The scripts will automatically install `wrangler` via `npx` if it is not already available.
 
 ## Setup
 Install dependencies (none currently) and run the scripts using Node.js.
